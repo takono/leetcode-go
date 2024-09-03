@@ -1,0 +1,15 @@
+{
+  "name": "leetcode-go-dev-container",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "go.gopath": "/go",
+    "go.goroot": "/usr/local/go",
+    "go.formatTool": "gofmt",
+    "go.lintTool": "golint",
+    "go.useLanguageServer": true
+  },
+  "extensions": ["golang.Go"],
+  "forwardPorts": [8080],
+  "postCreateCommand": "go get && go build .",
+  "shutdownAction": "stopContainer"
+}
